@@ -6,13 +6,15 @@ using TechTalk.SpecFlow;
 [Binding]
 public class GoogleSearchSteps
 {
-    private IWebDriver driver;
+   private readonly ScenarioContext _scenarioContext;
+     IWebDriver driver;
 
-    [BeforeScenario]
-    public void Setup()
+    public GoogleSearchSteps(ScenarioContext scenarioContext)
     {
-        driver = new ChromeDriver();
+        _scenarioContext = scenarioContext;
+        driver = _scenarioContext.Get<IWebDriver>("driver");
     }
+
 
     [Given(@"I have navigated to Google")]
     public void GivenIHaveNavigatedToGoogle()
