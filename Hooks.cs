@@ -20,11 +20,13 @@ public class Hooks
     [BeforeScenario]
     public void BeforeScenario()
     {
-        string browser = Environment.GetEnvironmentVariable("browser");
+        //string browser = Environment.GetEnvironmentVariable("browser");
+        string browser = _scenarioContext.ScenarioInfo.Tags.Contains("Chrome") ? "Chrome" : "Firefox";
+        Console.WriteLine("BROWSER IS :: " + _scenarioContext.ScenarioInfo.Tags.Contains("Chrome"));
 
         switch (browser)
         {
-            case "chrome":
+            case "Chrome":
                 ChromeOptions capabilities = new ChromeOptions();
                 capabilities.BrowserVersion = "latest";
                 Dictionary<string, object> ltOptions = new Dictionary<string, object>();
@@ -39,7 +41,7 @@ public class Hooks
                 _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
                 _scenarioContext["driver"] = _driver;
                 break;
-            case "firefox":
+            case "Firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.BrowserVersion = "125";
                 Dictionary<string, object> ltOptionsff = new Dictionary<string, object>();

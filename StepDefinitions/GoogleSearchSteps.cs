@@ -20,6 +20,7 @@ public class GoogleSearchSteps
     public void GivenIHaveNavigatedToGoogle()
     {
         driver.Navigate().GoToUrl("https://www.google.com");
+        Thread.Sleep(2000);
          
     }
 
@@ -28,6 +29,7 @@ public class GoogleSearchSteps
     {
         var searchBox = driver.FindElement(By.Name("q"));
         searchBox.SendKeys(searchTerm + Keys.Enter);
+        Thread.Sleep(2000);
     }
 
     [Then(@"the page title should contain ""(.*)""")]
