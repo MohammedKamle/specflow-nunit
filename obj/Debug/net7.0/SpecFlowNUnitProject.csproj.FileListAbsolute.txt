@@ -112,3 +112,4 @@
 /Users/mohammadk/SpecFlowNUnitProject/obj/Debug/net7.0/SpecFlowNUnitProject.pdb
 /Users/mohammadk/SpecFlowNUnitProject/obj/Debug/net7.0/SpecFlowNUnitProject.genruntimeconfig.cache
 /Users/mohammadk/SpecFlowNUnitProject/obj/Debug/net7.0/ref/SpecFlowNUnitProject.dll
+/Users/mohammadk/SpecFlowNUnitProject/bin/Debug/net7.0/SpecFlowNUnitProject.dll.config

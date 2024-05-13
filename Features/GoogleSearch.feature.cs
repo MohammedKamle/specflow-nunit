@@ -75,16 +75,12 @@ namespace SpecFlowNUnitProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search for OpenAI on Google")]
-        [NUnit.Framework.CategoryAttribute("Firefox")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
-        public void SearchForOpenAIOnGoogle()
+        [NUnit.Framework.DescriptionAttribute("Search for OpenAI on Google f")]
+        public void SearchForOpenAIOnGoogleF()
         {
-            string[] tagsOfScenario = new string[] {
-                    "Firefox",
-                    "Chrome"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for OpenAI on Google", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for OpenAI on Google f", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

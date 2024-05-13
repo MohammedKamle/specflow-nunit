@@ -6,6 +6,8 @@ using OpenQA.Selenium.Remote;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Configuration;
 using System.Collections.Specialized;
+using System.Configuration;
+using System.Xml.Linq;
 
 
 
@@ -25,8 +27,16 @@ public class Hooks
     public void BeforeScenario()
     {
         //string browser = Environment.GetEnvironmentVariable("browser");
-        string browser = _scenarioContext.ScenarioInfo.Tags.Contains("Chrome") ? "Chrome" : "Firefox";
-        Console.WriteLine("BROWSER IS :: " + _scenarioContext.ScenarioInfo.Tags.Contains("Chrome"));
+        // string browser = _scenarioContext.ScenarioInfo.Tags.Contains("Chrome") ? "Chrome" : "Firefox";
+        // Console.WriteLine("BROWSER IS :: " + _scenarioContext.ScenarioInfo.Tags.Contains("Chrome"));
+        // string browser =  ConfigurationManager.AppSettings["Browser"];
+
+         XDocument doc = XDocument.Load("app.config");
+        XElement browserElement = doc.Descendants("add")
+                                     .FirstOrDefault(e => e.Attribute("key")?.Value == "Browser");
+         string browser = browserElement?.Attribute("value")?.Value;
+
+         Console.WriteLine("BROWSER IS :: " + browser);
 
         switch (browser)
         {
