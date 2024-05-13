@@ -1,7 +1,7 @@
-<assembly>
+<!-- <assembly>
   <test-assembly>AssemblyInfo.cs</test-assembly>
   <test-parameters>
     <parameter name="Browser" value="Chrome" />
     <parameter name="Browser" value="Firefox" />
   </test-parameters>
-</assembly>
+</assembly> -->

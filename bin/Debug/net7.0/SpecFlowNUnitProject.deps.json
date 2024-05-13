@@ -11,6 +11,7 @@
           "Microsoft.NET.Test.Sdk": "17.9.0",
           "NUnit": "4.1.0",
           "NUnit.Console": "3.17.0",
+          "NUnit.Runners": "3.12.0",
           "NUnit3TestAdapter": "4.5.0",
           "Selenium.WebDriver": "4.20.0",
           "Selenium.WebDriver.ChromeDriver": "124.0.6367.9100",
@@ -368,6 +369,11 @@
       "NUnit.Extension.NUnitV2ResultWriter/3.6.0": {},
       "NUnit.Extension.TeamCityEventListener/1.0.7": {},
       "NUnit.Extension.VSProjectLoader/3.8.0": {},
+      "NUnit.Runners/3.12.0": {
+        "dependencies": {
+          "NUnit.Console": "3.17.0"
+        }
+      },
       "NUnit3TestAdapter/4.5.0": {},
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -1115,6 +1121,13 @@
       "sha512": "sha512-CIScV9a7+wUu6Ylb+WO0q/WGWQVoB05TUj3XZHa1CO+2BInDdfIVkqtlrSguhy6D/AGIMaLVrCZpQkQ2m0bbzQ==",
       "path": "nunit.extension.vsprojectloader/3.8.0",
       "hashPath": "nunit.extension.vsprojectloader.3.8.0.nupkg.sha512"
+    },
+    "NUnit.Runners/3.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KNpc03ZPF8wUWdPnLwNch1ycqsUNJgsheVlsUQcsHStuN5S7HMuNEGAavBNVwsHGq++GmtgG0N1MBVEgmxFtFg==",
+      "path": "nunit.runners/3.12.0",
+      "hashPath": "nunit.runners.3.12.0.nupkg.sha512"
     },
     "NUnit3TestAdapter/4.5.0": {
       "type": "package",

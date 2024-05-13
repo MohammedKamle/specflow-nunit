@@ -4,6 +4,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Configuration;
+using System.Collections.Specialized;
+
+
 
 [Binding]
 public class Hooks
@@ -78,9 +82,31 @@ public class Hooks
 
     }
 
+
     [AfterScenario]
     public void AfterScenario()
     {
         _driver.Quit(); // Close the WebDriver after the scenario
     }
 }
+
+    //  [TestFixture]
+    // [Parallelizable(ParallelScope.Children)] // Run tests in parallel
+    // public class TestClass
+    // {
+    //     [Test]
+    //     [TestCase("Chrome")]
+    //     [TestCase("Firefox")]
+    //     public void ExecuteFeature(string browser)
+    //     {   
+    //         //string featureFilePath = @"path\to\your\feature.feature";
+
+    //         // Initialize the SpecFlow runtime
+    //         var testRunner = new TestRunner();
+
+    //         // Execute the feature file
+    //         var testResult = testRunner.RunScenario( "/Users/mohammadk/SpecFlowNUnitProject/Features/GoogleSearch.feature");
+
+    //         System.Console.WriteLine($"Executing feature on {browser}");
+    //     }
+    // }
