@@ -100,23 +100,23 @@ public class Hooks
     }
 }
 
-    //  [TestFixture]
-    // [Parallelizable(ParallelScope.Children)] // Run tests in parallel
-    // public class TestClass
-    // {
-    //     [Test]
-    //     [TestCase("Chrome")]
-    //     [TestCase("Firefox")]
-    //     public void ExecuteFeature(string browser)
-    //     {   
-    //         //string featureFilePath = @"path\to\your\feature.feature";
+     [TestFixture]
+    [Parallelizable(ParallelScope.Children)] // Run tests in parallel
+    public class TestClass
+    {
+        [Test]
+        [TestCase("Chrome")]
+        [TestCase("Firefox")]
+        public void ExecuteFeature(string browser)
+        {   
+            string featureFilePath = @"path\to\your\feature.feature";
 
-    //         // Initialize the SpecFlow runtime
-    //         var testRunner = new TestRunner();
+            // Initialize the SpecFlow runtime
+            var testRunner = new TestRunner();
+            
+            // Execute the feature file
+            var testResult = testRunner.RunScenario( "/Users/mohammadk/SpecFlowNUnitProject/Features/GoogleSearch.feature");
 
-    //         // Execute the feature file
-    //         var testResult = testRunner.RunScenario( "/Users/mohammadk/SpecFlowNUnitProject/Features/GoogleSearch.feature");
-
-    //         System.Console.WriteLine($"Executing feature on {browser}");
-    //     }
-    // }
+            System.Console.WriteLine($"Executing feature on {browser}");
+        }
+    }
