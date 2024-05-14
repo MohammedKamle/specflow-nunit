@@ -44,8 +44,8 @@ public class Hooks
                 ChromeOptions capabilities = new ChromeOptions();
                 capabilities.BrowserVersion = "latest";
                 Dictionary<string, object> ltOptions = new Dictionary<string, object>();
-                ltOptions.Add("username", "mohammadk");
-                ltOptions.Add("accessKey", "gkrzT0iFKjDjehXpMTznxM1lHIZXSYjV3H8Ntk0s2rCUJJO3WU");
+                ltOptions.Add("username", "");
+                ltOptions.Add("accessKey", "");
                 ltOptions.Add("platformName", "Windows 10");
                 ltOptions.Add("build", "lbs-debug");
                 ltOptions.Add("w3c", true);
@@ -59,8 +59,8 @@ public class Hooks
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.BrowserVersion = "125";
                 Dictionary<string, object> ltOptionsff = new Dictionary<string, object>();
-                ltOptionsff.Add("username", "mohammadk");
-                ltOptionsff.Add("accessKey", "gkrzT0iFKjDjehXpMTznxM1lHIZXSYjV3H8Ntk0s2rCUJJO3WU");
+                ltOptionsff.Add("username", "");
+                ltOptionsff.Add("accessKey", "");
                 ltOptionsff.Add("platformName", "Windows 10");
                 ltOptionsff.Add("build", "lbs-debug");
                 ltOptionsff.Add("w3c", true);
@@ -80,7 +80,7 @@ public class Hooks
                 ltOptionsAndroid.Add("isRealMobile", true);
                 ltOptionsAndroid.Add("deviceName", "Pixel.*");
                 androidCaps.AddAdditionalOption("LT:Options", ltOptionsAndroid);
-                _driver = new RemoteWebDriver(new Uri("https://mohammadk:gkrzT0iFKjDjehXpMTznxM1lHIZXSYjV3H8Ntk0s2rCUJJO3WU@mobile-hub.lambdatest.com/wd/hub"), androidCaps);
+                _driver = new RemoteWebDriver(new Uri("https://<YOUR_USERNAME>>:<YOUR_ACCESS_KEY>@mobile-hub.lambdatest.com/wd/hub"), androidCaps);
                 _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
                 _scenarioContext["driver"] = _driver;     
                 break;
